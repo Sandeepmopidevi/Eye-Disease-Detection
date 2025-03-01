@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Eye Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Centered Title at the Top -->
+    <div class="header">Eye Disease Detection</div>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="file">Choose Image</label>
+            <input type="file" name="file" id="file" required onchange="displayFileName()">
+            <span id="file-name">No file chosen</span>
+        </div>
+        <button type="submit">Upload & Predict</button>
+    </form>
+
+    <script>
+        function displayFileName() {
+            var fileInput = document.getElementById('file');
+            var fileName = document.getElementById('file-name');
+            if (fileInput.files.length > 0) {
+                fileName.textContent = fileInput.files[0].name;
+            } else {
+                fileName.textContent = "No file chosen";
+            }
+        }
+    </script>
+</body>
+</html>

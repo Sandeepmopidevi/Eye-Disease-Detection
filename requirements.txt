@@ -1,0 +1,7 @@
+Flask
+tensorflow
+numpy
+matplotlib
+seaborn
+scikit-learn
+Pillow

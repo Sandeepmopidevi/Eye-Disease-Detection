@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Prediction Result</h2>
+    <img src="{{ img_path }}" width="300">
+    <h3>Predicted Class: {{ result }}</h3>
+    <a href="/">Try Another Image</a>
+</body>
+</html>
