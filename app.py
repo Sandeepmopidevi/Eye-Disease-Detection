@@ -15,8 +15,7 @@ MODEL_PATH = "models/eye_disease_model.h5"
 logging.info(f"Loading model from {MODEL_PATH}...")
 model = load_model(MODEL_PATH)
 logging.info("Model loaded successfully!")
-
-CATEGORIES = ["Normal", "Cataract", "Diabetic Retinopathy", "Glaucoma"]
+CATEGORIES = ["Cataract", "Diabetic Retinopathy", "Glaucoma", "Normal"]
 UPLOAD_FOLDER = "static/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
